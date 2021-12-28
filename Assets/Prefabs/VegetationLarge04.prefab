@@ -319,7 +319,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77820008ecdebf74184b1e2f176d27c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _unitPrefab: {fileID: 0}
   _unitParent: {fileID: 0}
   _maxHealth: 0
   _icon: {fileID: 21300000, guid: 0d5634256f40ad047969f1e293ff622c, type: 3}
@@ -335,8 +334,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30c4730cfb996534eabe9094ebe5a4b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _renderer: {fileID: 0}
-  _outlineMaterial: {fileID: 0}
+  _renderers:
+  - {fileID: 1567782859035817172}
+  - {fileID: 1567782859035817170}
+  - {fileID: 1567782859035817168}
+  _outlineMaterial: {fileID: 2100000, guid: ba84175ea3638ad4ca06ed90a554424c, type: 2}
 --- !u!65 &7171821777820110665
 BoxCollider:
   m_ObjectHideFlags: 0
