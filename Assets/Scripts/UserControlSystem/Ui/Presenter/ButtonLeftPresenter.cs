@@ -15,7 +15,7 @@ public class ButtonLeftPresenter : MonoBehaviour
     private void Start()
     {
 
-        _selectableValue.OnSelected += onSelected;
+        _selectableValue.OnNewValue += onSelected;
         onSelected(_selectableValue.CurrentValue);
     }
 
