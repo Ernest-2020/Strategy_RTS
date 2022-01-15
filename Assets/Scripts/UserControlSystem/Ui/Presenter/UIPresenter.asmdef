@@ -5,6 +5,8 @@
         "UIModel",
         "UIView",
         "Unity.TextMeshPro",
+        "UserControlSystem",
+        "Utils",
         "Abstractions"
     ],
     "includePlatforms": [],

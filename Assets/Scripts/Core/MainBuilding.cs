@@ -1,21 +1,24 @@
 using UnityEngine;
 
-public class MainBuilding : MonoBehaviour, IUnitProducer, ISelectable
+public class MainBuilding : CommandExecutorBase<IProduceUnitCommand>, ISelectable,IAttackable
 {
     public float Health => _health;
-    
+
 
     public float MaxHealth => _maxHealth;
 
     public Sprite icon => _icon;
-    [SerializeField] private GameObject _unitPrefab;
-    [SerializeField] private Transform _unitParent;
+
+    public Transform PivotPoint => _pivotPoint;
+    [SerializeField] private Transform _unitParent,_pivotPoint;
     [SerializeField] private float _maxHealth = 1000;
     [SerializeField] Sprite _icon;
     private float _health = 1000;
 
-    public void ProduceUnit()
+    public override void ExecuteSpecificCommand(IProduceUnitCommand command)
     {
-        Instantiate(_unitPrefab,new Vector3(Random.Range(-10, 10), 0, Random.Range(-10, 10)),Quaternion.identity,_unitParent);
+        Vector3 positionUnits = new Vector3(Random.Range(-10, 10), 0, Random.Range(-10, 10));
+        Instantiate(command.UnitPrefab, positionUnits, Quaternion.identity, _unitParent);
+
     }
 }
