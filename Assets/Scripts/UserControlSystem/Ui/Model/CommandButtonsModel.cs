@@ -8,11 +8,11 @@ public class CommandButtonsModel
     public event Action OnCommandSent;
     public event Action OnCommandCancel;
 
-    [Inject] CommandCreatorBase<ProduceUnitCommand> _unitProducer;
-    [Inject] CommandCreatorBase<AttackCommand> _attacer;
-    [Inject] CommandCreatorBase<MoveCommand> _mover;
-    [Inject] CommandCreatorBase<StopCommand> _stopper;
-    [Inject] CommandCreatorBase<PatrolCommand> _patroller;
+    [Inject] CommandCreatorBase<IProduceUnitCommand> _unitProducer;
+    [Inject] CommandCreatorBase<IAttackCommand> _attacer;
+    [Inject] CommandCreatorBase<IMoveCommand> _mover;
+    [Inject] CommandCreatorBase<IStopCommand> _stopper;
+    [Inject] CommandCreatorBase<IPatrolCommand> _patroller;
 
     private bool _commanIsPending;
 
