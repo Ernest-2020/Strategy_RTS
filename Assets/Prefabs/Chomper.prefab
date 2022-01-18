@@ -552,12 +552,14 @@ GameObject:
   - component: {fileID: 4641918677094350910}
   - component: {fileID: 4641918677101522908}
   - component: {fileID: 7132981796868654837}
+  - component: {fileID: -4108612976543192337}
   - component: {fileID: 8012088364381182501}
   - component: {fileID: 7639850159211874342}
   - component: {fileID: 1687987407955027296}
   - component: {fileID: 8627124513064409824}
   - component: {fileID: 3649319834408278236}
   - component: {fileID: 845081758602202617}
+  - component: {fileID: -6989349791206839225}
   m_Layer: 0
   m_Name: Chomper
   m_TagString: Untagged
@@ -592,7 +594,7 @@ Animator:
   m_GameObject: {fileID: 4641918677094128670}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 2732fe64dd2799f439fb845921df626b, type: 3}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a4346f57b633ae04fb33f880c005df22, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
@@ -613,8 +615,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2502ddbf04b7444990064165b508420, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _pivotPoint: {fileID: 0}
   _maxHealth: 100
   _icon: {fileID: 21300000, guid: 9d538a4e670c9ae4ba6b39b8335e1465, type: 3}
+--- !u!114 &-4108612976543192337
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4641918677094128670}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22bdead9d99aaaa48aaaefa5d71e2b9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _agent: {fileID: -6989349791206839225}
 --- !u!114 &8012088364381182501
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -639,6 +655,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c7e92a25bf93cf4a896c2fa28ceb095, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _stop: {fileID: -4108612976543192337}
+  _animator: {fileID: 4641918677101522908}
 --- !u!114 &1687987407955027296
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -691,6 +709,28 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.62
   m_Center: {x: 0, y: 0.51, z: 0}
+--- !u!195 &-6989349791206839225
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4641918677094128670}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.5
+  m_Speed: 3.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 2
+  m_BaseOffset: 0
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
 --- !u!1 &4641918677094128704
 GameObject:
   m_ObjectHideFlags: 0
