@@ -20,15 +20,15 @@ public class MoveCommandCommandCreator : CommandCreatorBase<IMoveCommand>
 		_creationCallback = null;
 	}
 
+	protected override void ClassSpecificCommandCreation(Action<IMoveCommand> creationCallback)
+	{
+		_creationCallback = creationCallback;
+	}
+
 	public override void ProcessCancel()
 	{
 		base.ProcessCancel();
 
 		_creationCallback = null;
-	}
-
-    protected override void ClassSpecificCommandCreation(Action<IMoveCommand> creationCallback)
-    {
-		_creationCallback = creationCallback;
 	}
 }
