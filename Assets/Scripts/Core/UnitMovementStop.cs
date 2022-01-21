@@ -4,13 +4,10 @@ using UnityEngine.AI;
 
 public class UnitMovementStop : MonoBehaviour, IAwaitable<AsyncExtensions.Void>
 {
-    public class StopAwaiter : IAwaiter<AsyncExtensions.Void>
+    public class StopAwaiter : AwaiterBase<AsyncExtensions.Void>
     {
         private readonly UnitMovementStop _unitMovementStop;
-        private Action _continuation;
-        private bool _isCompleted;
-        public bool IsCompleted => _isCompleted;
-        public AsyncExtensions.Void GetResult() => new AsyncExtensions.Void();
+
         public StopAwaiter(UnitMovementStop unitMovementStop)
         {
             _unitMovementStop = unitMovementStop;
@@ -20,22 +17,8 @@ public class UnitMovementStop : MonoBehaviour, IAwaitable<AsyncExtensions.Void>
         private void onStop()
         {
             _unitMovementStop.OnStop -= onStop;
-            _isCompleted = true;
-            _continuation?.Invoke();
+            onWaitFinish(new AsyncExtensions.Void());
         }
-
-        public void OnCompleted(Action continuation)
-        {
-            if (_isCompleted)
-            {
-                continuation?.Invoke();
-            }
-            else
-            {
-                _continuation = continuation;
-            }
-        }
-        
     }
 
     public event Action OnStop;

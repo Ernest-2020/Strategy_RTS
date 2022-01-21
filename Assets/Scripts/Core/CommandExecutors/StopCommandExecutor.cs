@@ -7,6 +7,4 @@ public class StopCommandExecutor : CommandExecutorBase<IStopCommand>
     {
         CancellationTokenSource?.Cancel();
     }
-
-
 }
