@@ -1,5 +1,6 @@
 using UnityEngine;
 using Zenject;
+using System;
 
 [CreateAssetMenu(fileName = "AssetsInstaller", menuName = "Installers/AssetsInstaller")]
 public class AssetsInstaller : ScriptableObjectInstaller<AssetsInstaller>
@@ -14,5 +15,6 @@ public class AssetsInstaller : ScriptableObjectInstaller<AssetsInstaller>
 		Container.Bind<IAwaitable<IAttackable>>().FromInstance(_attackableClicksRMB);
 		Container.Bind<IAwaitable<Vector3>>().FromInstance(_groundClicksRMB);
 		Container.BindInstances(_legacyContext, _selectables);
+		Container.Bind<IObservable<ISelectable>>().FromInstance(_selectables);
 	}
 }
