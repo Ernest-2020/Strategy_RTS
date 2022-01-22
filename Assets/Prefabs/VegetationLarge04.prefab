@@ -320,6 +320,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _unitParent: {fileID: 0}
+  _pivotPoint: {fileID: 0}
   _maxHealth: 0
   _icon: {fileID: 21300000, guid: 0d5634256f40ad047969f1e293ff622c, type: 3}
 --- !u!114 &3195367940948161712
@@ -350,5 +351,5 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 6.6387005, y: 7.3905277, z: 6.0947886}
-  m_Center: {x: 0.516881, y: 3.5711775, z: 0.42803562}
+  m_Size: {x: 2.9823995, y: 7.3905277, z: 3.0726032}
+  m_Center: {x: 0.2623062, y: 3.5711775, z: 0.6305408}
