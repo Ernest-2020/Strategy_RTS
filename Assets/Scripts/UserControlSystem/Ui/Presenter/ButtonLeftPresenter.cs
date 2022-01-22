@@ -1,6 +1,9 @@
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using Zenject;
+using UniRx;
+using System;
 
 public class ButtonLeftPresenter : MonoBehaviour
 {
@@ -9,14 +12,11 @@ public class ButtonLeftPresenter : MonoBehaviour
     [SerializeField] private TextMeshProUGUI _text;
     [SerializeField] private Image _sliderbackground;
     [SerializeField] private Image _sliderFillmage;
-    [SerializeField] private SelectableValue _selectableValue;
-
+    [Inject] private IObservable<ISelectable> _selectedValues;
 
     private void Start()
     {
-
-        _selectableValue.OnSelected += onSelected;
-        onSelected(_selectableValue.CurrentValue);
+        _selectedValues.Subscribe(onSelected);
     }
 
     private void onSelected(ISelectable selected)
