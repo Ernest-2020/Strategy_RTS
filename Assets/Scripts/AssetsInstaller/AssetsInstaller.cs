@@ -9,6 +9,7 @@ public class AssetsInstaller : ScriptableObjectInstaller<AssetsInstaller>
 	[SerializeField] private Vector3Value _groundClicksRMB;
 	[SerializeField] private AttackableValue _attackableClicksRMB;
 	[SerializeField] private SelectableValue _selectables;
+	[SerializeField] private Sprite _chomperSprite;
 
 	public override void InstallBindings()
 	{
@@ -16,5 +17,6 @@ public class AssetsInstaller : ScriptableObjectInstaller<AssetsInstaller>
 		Container.Bind<IAwaitable<Vector3>>().FromInstance(_groundClicksRMB);
 		Container.BindInstances(_legacyContext, _selectables);
 		Container.Bind<IObservable<ISelectable>>().FromInstance(_selectables);
+		Container.Bind<Sprite>().WithId("Chomper").FromInstance(_chomperSprite);
 	}
 }

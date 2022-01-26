@@ -2,7 +2,10 @@
     "name": "UIView",
     "rootNamespace": "",
     "references": [
-        "Abstractions"
+        "Abstractions",
+        "Unity.TextMeshPro",
+        "UniRx",
+        "Zenject"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

@@ -7,7 +7,7 @@ public class MainUnit : MonoBehaviour, ISelectable,IAttackable
     
     public float MaxHealth => _maxHealth;
 
-    public Sprite icon => _icon;
+    public Sprite Icon => _icon;
 
     public Transform PivotPoint => _pivotPoint;
 

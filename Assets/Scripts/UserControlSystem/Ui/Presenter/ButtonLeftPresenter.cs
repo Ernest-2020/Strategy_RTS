@@ -27,7 +27,7 @@ public class ButtonLeftPresenter : MonoBehaviour
 
         if (selected!=null)
         {
-            _selectedImage.sprite = selected.icon;
+            _selectedImage.sprite = selected.Icon;
             _text.text = $"{selected.Health}/{selected.MaxHealth}";
             _heathSlider.minValue = 0;
             _heathSlider.maxValue = selected.MaxHealth;
