@@ -4,7 +4,8 @@
     "references": [
         "Core",
         "Abstractions",
-        "Unity.TextMeshPro"
+        "Unity.TextMeshPro",
+        "Utils"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

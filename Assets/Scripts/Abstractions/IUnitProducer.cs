@@ -1,4 +1,6 @@
+using UniRx;
 public interface IUnitProducer
 {
-    void ProduceUnit();
+    IReadOnlyReactiveCollection<IUnitProductionTask> Queue { get; }
+    public void Cancel(int index);
 }
