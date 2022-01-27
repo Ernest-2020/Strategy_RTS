@@ -1,4 +1,7 @@
 public interface ICommandExecutor
 {
-    void ExecuteComand(object command);
+    
+}
+public interface ICommandExecutor<T> : ICommandExecutor where T : ICommand
+{
 }

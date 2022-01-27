@@ -15,12 +15,10 @@ public class MainBuilding : MonoBehaviour, ISelectable, IAttackable
     [SerializeField] private Transform _unitParent, _pivotPoint;
     [SerializeField] private float _maxHealth = 1000;
     [SerializeField] Sprite _icon;
+    public Vector3 RallyPoint { get; set; }
     private float _health = 1000;
-
-    //public override void ExecuteSpecificCommand(IProduceUnitCommand command)
-    //{
-    //    Vector3 positionUnits = new Vector3(Random.Range(-10, 10), 0, Random.Range(-10, 10));
-    //    Instantiate(command.UnitPrefab, positionUnits, Quaternion.identity, _unitParent);
-
-    //}
+    private void Start()
+    {
+        RallyPoint = transform.position;
+    }
 }
