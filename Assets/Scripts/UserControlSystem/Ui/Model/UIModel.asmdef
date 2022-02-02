@@ -2,7 +2,11 @@
     "name": "UIModel",
     "rootNamespace": "",
     "references": [
-        "Abstractions"
+        "Abstractions",
+        "Utils",
+        "UserControlSystem",
+        "Zenject",
+        "UniRx"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

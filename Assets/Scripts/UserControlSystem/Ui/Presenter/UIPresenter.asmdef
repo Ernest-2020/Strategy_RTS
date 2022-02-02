@@ -5,7 +5,10 @@
         "UIModel",
         "UIView",
         "Unity.TextMeshPro",
-        "Abstractions"
+        "UserControlSystem",
+        "Utils",
+        "Abstractions",
+        "UniRx"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],
