@@ -259,6 +259,7 @@ GameObject:
   - component: {fileID: 7171821777820110665}
   - component: {fileID: 2277087529205356814}
   - component: {fileID: -7496694973067870754}
+  - component: {fileID: 2763981557305960569}
   m_Layer: 0
   m_Name: VegetationLarge04
   m_TagString: Untagged
@@ -398,5 +399,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b51c292d377548c4dae6207613282f54, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2763981557305960569
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1567782859037747734}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a537c2743ea58141a89756e1f67ccba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
