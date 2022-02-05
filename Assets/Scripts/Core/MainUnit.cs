@@ -1,11 +1,16 @@
 using UnityEngine;
 
-public class MainUnit : MonoBehaviour, ISelectable,IAttackable,IDamageDealer
+public class MainUnit : MonoBehaviour, ISelectable, IAttackable, IDamageDealer  , IAutomaticAttacker
 {
     [SerializeField] private Animator _animator;
     [SerializeField] private StopCommandExecutor _stopCommand;
+    [SerializeField] private int _damage = 25;
+    [SerializeField] private Transform _pivotPoint;
+    [SerializeField] private float _maxHealth = 100;
+    [SerializeField] private Sprite _icon;
+    [SerializeField] private float _visionRadius;
     public float Health => _health;
-    
+
     public float MaxHealth => _maxHealth;
 
     public Sprite Icon => _icon;
@@ -14,10 +19,10 @@ public class MainUnit : MonoBehaviour, ISelectable,IAttackable,IDamageDealer
 
     public int Damage => _damage;
 
-    [SerializeField] private int _damage = 25;
-    [SerializeField] private Transform _pivotPoint;
-    [SerializeField] private float _maxHealth = 100;
-    [SerializeField] private Sprite _icon;
+    public float VisionRadius => _visionRadius;
+
+
+
 
     private float _health = 100;
 
